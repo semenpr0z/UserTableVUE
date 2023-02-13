@@ -174,7 +174,7 @@ export default {
             </tr>
         </thead>
         <tbody class="users">
-            <UserCard
+            <TransitionGroup name="list"><UserCard
             v-for="item in paginatedData"
             :key="item.id"
             :Id="item.id"
@@ -184,6 +184,7 @@ export default {
             :Rating="item.rating"
             @showConfirmation="showConfirmation"
             > </UserCard>
+            </TransitionGroup>
         </tbody>
     </table>
     <div class="buttons-pag">
@@ -283,4 +284,21 @@ padding-top: 22px;
         }
     }
 }
+
+.list-move{}
+.list-enter-active{
+  transition: all 0.5s ease;
+}
+
+.list-enter-from{
+    opacity: 0;
+    transform: translateX(30px);
+}
+.list-leave-to {
+  opacity: 0;
+}
+
+.list-leave-active {
+}
+
 </style>
