@@ -296,8 +296,4 @@ padding-top: 22px;
 .list-leave-to {
   opacity: 0;
 }
-
-.list-leave-active {
-}
-
 </style>
