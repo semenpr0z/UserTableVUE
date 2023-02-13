@@ -40,6 +40,11 @@ export default {
         default: []
     }
   },
+  watch: {
+    search() {
+        this.pageNumber = 0
+    }
+  },
   computed: {
     pageCount(){
         let l = this.info.filter(item => (item.username.toUpperCase().indexOf(this.search.toUpperCase()) !== -1 || item.email.toUpperCase().indexOf(this.search.toUpperCase()) !== -1)).length,
