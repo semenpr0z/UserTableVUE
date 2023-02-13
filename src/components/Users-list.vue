@@ -285,7 +285,6 @@ padding-top: 22px;
     }
 }
 
-.list-move{}
 .list-enter-active{
   transition: all 0.5s ease;
 }
