@@ -285,15 +285,21 @@ padding-top: 22px;
     }
 }
 
-.list-enter-active{
-  transition: all 0.5s ease;
+.list-move,
+.list-enter-active,
+.list-leave-active{
+  transition: all 1s ease;
 }
 
 .list-enter-from{
     opacity: 0;
     transform: translateX(30px);
 }
-.list-leave-to {
-  opacity: 0;
+.list-leave-active {
+  position: absolute;
 }
+.list-leave-to {
+  display: none;
+}
+
 </style>
